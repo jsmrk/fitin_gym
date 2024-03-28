@@ -2,6 +2,7 @@
 /* eslint-disable @typescript-eslint/ban-types */
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { SelectedPage } from "./types";
+import React from "react";
 
 type Props = {
   children: React.ReactNode;
