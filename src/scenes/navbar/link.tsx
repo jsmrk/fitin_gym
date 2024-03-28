@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/ban-types */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { SelectedPage } from "@/shared/types";
+
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
 type Props = {
