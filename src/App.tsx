@@ -52,6 +52,11 @@ function App() {
           throw new Error("Function not implemented.");
         }}
       />
+      {/* <Footer
+        setSelectedPage={function (value: SelectedPage): void {
+          throw new Error("Function not implemented.");
+        }}
+      /> */}
     </div>
   );
 }

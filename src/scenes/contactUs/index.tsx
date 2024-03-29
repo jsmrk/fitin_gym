@@ -26,7 +26,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
     }
   };
 
-  const inputStyle = `mt-5 w-full rounded-lg bg-primary-300 px-5 py-3 placeholder-white`;
+  const inputStyle = `mb-5 w-full rounded-lg bg-primary-300 px-5 py-3 placeholder-white`;
 
   return (
     <section id="contactus" className="mx-auto w-5/6 pt-24 pb-32">
@@ -131,7 +131,25 @@ const ContactUs = ({ setSelectedPage }: Props) => {
               </button>
             </form>
           </motion.div>
-          <motion.div></motion.div>
+          <motion.div
+            className="relative mt-16 basis-2/5 md:mt-0"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ delay: 0.3, duration: 1.5 }}
+            variants={{
+              hidden: { opacity: 0, x: -50 },
+              visible: { opacity: 1, x: 0 },
+            }}
+          >
+            <div className="md:before:content-evolvetext w-full before:absolute before:-bottom-20 before:-right-10 before:z-[-1]">
+              <img
+                src={ContactUsPageGraphic}
+                alt="contact-graphic"
+                className="w-full"
+              />
+            </div>
+          </motion.div>
         </div>
       </motion.div>
     </section>
