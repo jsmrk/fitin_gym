@@ -5,6 +5,7 @@ import { SelectedPage } from "./shared/types";
 import Home from "./scenes/home";
 import Benefits from "./scenes/benefits";
 import OurClasses from "./scenes/ourClasses";
+import ContactUs from "./scenes/contactUs";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
@@ -42,6 +43,11 @@ function App() {
         }}
       />
       <OurClasses
+        setSelectedPage={function (value: SelectedPage): void {
+          throw new Error("Function not implemented.");
+        }}
+      />
+      <ContactUs
         setSelectedPage={function (value: SelectedPage): void {
           throw new Error("Function not implemented.");
         }}
