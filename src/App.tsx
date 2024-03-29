@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Navbar from "./scenes/navbar";
 import { SelectedPage } from "./shared/types";
 import Home from "./scenes/home";
+import Benefits from "./scenes/benefits";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
@@ -30,6 +31,11 @@ function App() {
         isTopOfPage={isTopOfPage}
       />
       <Home
+        setSelectedPage={function (value: SelectedPage): void {
+          throw new Error("Function not implemented.");
+        }}
+      />
+      <Benefits
         setSelectedPage={function (value: SelectedPage): void {
           throw new Error("Function not implemented.");
         }}
