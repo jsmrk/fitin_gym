@@ -33,26 +33,10 @@ function App() {
         setSelectedPage={setSelectedPage}
         isTopOfPage={isTopOfPage}
       />
-      <Home
-        setSelectedPage={function (value: SelectedPage): void {
-          throw new Error("Function not implemented.");
-        }}
-      />
-      <Benefits
-        setSelectedPage={function (value: SelectedPage): void {
-          throw new Error("Function not implemented.");
-        }}
-      />
-      <OurClasses
-        setSelectedPage={function (value: SelectedPage): void {
-          throw new Error("Function not implemented.");
-        }}
-      />
-      <ContactUs
-        setSelectedPage={function (value: SelectedPage): void {
-          throw new Error("Function not implemented.");
-        }}
-      />
+      <Home setSelectedPage={setSelectedPage} />
+      <Benefits setSelectedPage={setSelectedPage} />
+      <OurClasses setSelectedPage={setSelectedPage} />
+      <ContactUs setSelectedPage={setSelectedPage} />
       <Footer />
     </div>
   );
