@@ -1,6 +1,8 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useEffect, useState } from "react";
 import Navbar from "./scenes/navbar";
 import { SelectedPage } from "./shared/types";
+import Home from "./scenes/home";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
@@ -26,6 +28,11 @@ function App() {
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
         isTopOfPage={isTopOfPage}
+      />
+      <Home
+        setSelectedPage={function (value: SelectedPage): void {
+          throw new Error("Function not implemented.");
+        }}
       />
     </div>
   );
