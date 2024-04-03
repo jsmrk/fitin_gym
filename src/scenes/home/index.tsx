@@ -19,7 +19,7 @@ const Home = ({ setSelectedPage }: Props) => {
     <section id="home" className="gap-16 bg-gray-20 py-10 md:h-full md:pb-0">
       {/* IMAGE AND MAIN HEADER*/}
       <motion.div
-        className="md:flex mx-auto w-5/6 items-center justify-center md:h-5/6"
+        className="md:flex mx-auto w-5/6 items-center justify-center md:h-full"
         onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
       >
         {/* MAIN HEADER */}
@@ -36,11 +36,12 @@ const Home = ({ setSelectedPage }: Props) => {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <div className="relative">
-              <div className="before:absolute before:-top-20 before:-left-20 before:z-[-1] md:before:content-evolvetext">
-                <img src={HomePageText} alt="home-page-text" />
-              </div>
-            </div>
+            <img
+              src={HomePageText}
+              alt="home-page-text"
+              className="w-[500px] pt-[80px] md:pt-0"
+            />
+
             <p className="mt-8 text-sm">
               Unrivaled Gym. Unparalleled Training Fitness Classes. World Class
               Studios to get the Body Shapes that you dream of.. Get your Dream
@@ -75,22 +76,13 @@ const Home = ({ setSelectedPage }: Props) => {
 
         {/* IMAGE  */}
         <div className="flex basis-3/5 justify-center md:z-10 md:ml-40 md:mt-16 md:justify-items-end">
-          <img src={HomPageGraphic} alt="home-page-graphic" />
+          <img
+            src={HomPageGraphic}
+            alt="home-page-graphic"
+            className="pt-11 md:pt-0"
+          />
         </div>
       </motion.div>
-
-      {/* SPONSOR */}
-      {isAboveMediumScreens && (
-        <div className="h-[150px] w-full bg-primary-100 py-10">
-          <div className="mx-auto w-5/6">
-            <div className="flex w-3/5 items-center justify-between gap-8">
-              <img src={SponsorRedBull} alt="SponsorRedBull" />
-              <img src={SponsorForbes} alt="SponsorForbes" />
-              <img src={SponsorFortune} alt="SponsorFortune" />
-            </div>
-          </div>
-        </div>
-      )}
     </section>
   );
 };
