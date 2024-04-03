@@ -25,12 +25,12 @@ const Navbar = ({ selectedPage, setSelectedPage, isTopOfPage }: Props) => {
   return (
     <nav>
       <div
-        className={`${navbarBackground} ${flexBetween} fixed top-0 z-30 w-full py-6`}
+        className={`${navbarBackground} ${flexBetween} fixed top-0 z-30 w-full pb-6 pt-8`}
       >
         <div className={`${flexBetween} mx-auto w-5/6`}>
           <div className={`${flexBetween} w-full gap-16`}>
             {/* LEFT SIDE */}
-            <img src={Logo} alt="" />
+            <img src={Logo} alt="" className="w-[125px]" />
 
             {/* RIGHT SIDE */}
             {isAboveMediumScreen ? (
@@ -57,12 +57,10 @@ const Navbar = ({ selectedPage, setSelectedPage, isTopOfPage }: Props) => {
                     setSelectedPage={setSelectedPage}
                   />
                 </div>
-                <div className={`${flexBetween} gap-8`}>
-                  <p>Sign In</p>
-                  <ActionButton setSelectedPage={setSelectedPage}>
-                    Become a Member
-                  </ActionButton>
-                </div>
+
+                <ActionButton setSelectedPage={setSelectedPage}>
+                  Become a Member
+                </ActionButton>
               </div>
             ) : (
               <button
@@ -109,12 +107,11 @@ const Navbar = ({ selectedPage, setSelectedPage, isTopOfPage }: Props) => {
               setSelectedPage={setSelectedPage}
             />
           </div>
-          {/* <div className={`${flexBetween} gap-8`}>
-          <p>Sign In</p>
-          <ActionButton setSelectedPage={setSelectedPage}>
-            Become a Member
-          </ActionButton>
-        </div> */}
+          <div className={`${flexBetween} gap-8`}>
+            <ActionButton setSelectedPage={setSelectedPage}>
+              Become a Member
+            </ActionButton>
+          </div>
         </div>
       )}
     </nav>
@@ -122,5 +119,3 @@ const Navbar = ({ selectedPage, setSelectedPage, isTopOfPage }: Props) => {
 };
 
 export default Navbar;
-
-// <div className={`${flexBetween} `}></div>

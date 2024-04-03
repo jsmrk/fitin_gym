@@ -12,6 +12,7 @@ import HText from "@/shared/HText";
 import Benefit from "./Benefit";
 import ActionButton from "@/shared/ActionButton";
 import BenefitsGraphic from "@/assets/BenefitsPageGraphic.png";
+import useMediaQuery from "@/hooks/useMediaQuery";
 
 const benefits: Array<BenefitType> = [
   {
@@ -44,6 +45,8 @@ const containerMotion = {
 type Props = { setSelectedPage: (value: SelectedPage) => void };
 
 function Benefits({ setSelectedPage }: Props) {
+  const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
+
   return (
     <section id="benefits" className=" mx-auto min-h-full w-5/6 py-20">
       <motion.div
@@ -94,7 +97,7 @@ function Benefits({ setSelectedPage }: Props) {
         <div className="mt-16 items-center justify-between gap-20 md:mt-28 md:flex">
           {/* GRAPHIC */}
           <img
-            className="mx-auto"
+            className="mx-auto "
             src={BenefitsGraphic}
             alt="benifits-graphic"
           />
@@ -102,7 +105,9 @@ function Benefits({ setSelectedPage }: Props) {
           <div>
             {/* TITLE */}
             <div className="relative">
-              <div className="before:absolute before:-top-20 before:-left-20 before:z-[1] before:content-abstractwaves">
+              <div
+                className={`${isAboveMediumScreens ? "before:absolute before:-top-20 before:-left-20 before:z-[1] before:content-abstractwaves pt-11 md:pt-0" : ""}`}
+              >
                 <motion.div
                   initial="hidden"
                   whileInView="visible"
@@ -132,7 +137,7 @@ function Benefits({ setSelectedPage }: Props) {
                 visible: { opacity: 1, x: 0 },
               }}
             >
-              <p className="my-5">
+              <p className="my-5 ">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Dolores et accusantium possimus iste laborum error. Ratione
                 eligendi asperiores aliquid numquam, ea velit recusandae eos
@@ -151,7 +156,9 @@ function Benefits({ setSelectedPage }: Props) {
 
             {/* BUTTON */}
             <div className="relative mt-16">
-              <div className="before:absolute before:-bottom-20 before:right-40 before:z-[1] before:content-sparkles">
+              <div
+                className={`${isAboveMediumScreens ? "before:absolute before:-bottom-20 before:right-40 before:z-[1] before:content-sparkles" : ""}`}
+              >
                 <ActionButton setSelectedPage={setSelectedPage}>
                   Join Now
                 </ActionButton>
