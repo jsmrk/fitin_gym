@@ -48,7 +48,7 @@ function Benefits({ setSelectedPage }: Props) {
   const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
 
   return (
-    <section id="benefits" className=" mx-auto min-h-full w-5/6 py-20">
+    <section id="benefits" className=" mx-auto min-h-full w-5/6 py-40 md:py-20">
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.Benefits)}
       >
@@ -117,6 +117,7 @@ function Benefits({ setSelectedPage }: Props) {
                     hidden: { opacity: 0, x: 50 },
                     visible: { opacity: 1, x: 0 },
                   }}
+                  className="pt-11 md:pt-0"
                 >
                   <HText>
                     MILLIONS OF HAPPY MEMBERS GETTING{" "}
