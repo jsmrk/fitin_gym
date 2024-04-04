@@ -1,14 +1,9 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { SelectedPage } from "@/shared/types";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 
 import ContactUsPageGraphic from "@/assets/ContactUsPageGraphic.png";
-import React from "react";
 import HText from "@/shared/HText";
-import { AsyncResource } from "async_hooks";
-import { error } from "console";
 
 type Props = { setSelectedPage: (value: SelectedPage) => void };
 
@@ -19,6 +14,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
     formState: { errors },
   } = useForm();
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const onSubmit = async (e: any) => {
     const isValid = await trigger();
     if (!isValid) {

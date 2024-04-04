@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { ClassType, SelectedPage } from "@/shared/types";
 import { motion } from "framer-motion";
 

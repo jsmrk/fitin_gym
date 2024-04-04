@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import React from "react";
 import {
   HomeModernIcon,
   UserGroupIcon,
@@ -87,7 +85,7 @@ function Benefits({ setSelectedPage }: Props) {
               icon={benefit.icon}
               title={benefit.title}
               description={benefit.description}
-              setSelectedPage={function (value: SelectedPage): void {
+              setSelectedPage={function (): void {
                 throw new Error("Function not implemented.");
               }}
             />
