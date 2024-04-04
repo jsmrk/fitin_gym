@@ -13,7 +13,7 @@ const Home = ({ setSelectedPage }: Props) => {
     <section id="home" className="bg-gray-20">
       {/* IMAGE AND MAIN HEADER*/}
       <motion.div
-        className="md:flex mx-auto w-5/6 items-center justify-center gap-40 md:pt-[150px] md:pb-[100px] pt-11"
+        className="md:flex mx-auto w-5/6 items-center justify-center gap-20 md:pt-[150px] md:pb-[100px] pt-11"
         onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
       >
         <div className="md:w-3/5 md:flex-row">

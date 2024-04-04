@@ -21,55 +21,56 @@ const Navbar = ({ selectedPage, setSelectedPage, isTopOfPage }: Props) => {
   const flexBetween = "flex items-center justify-between";
   const isAboveMediumScreen = useMediaQuery("(min-width: 1060px)");
   const navbarBackground = isTopOfPage ? "" : "bg-primary-100 drop-shadow";
-  const paddingScroll = isTopOfPage ? "" : "pt-8 md:pt-0";
 
   return (
     <nav>
       <div
-        className={`${navbarBackground} ${flexBetween} fixed top-0 z-30 w-full p-5`}
+        className={`${navbarBackground} ${flexBetween} fixed top-0 z-30 w-full pb-6 pt-8`}
       >
-        <div className={`${flexBetween} ${paddingScroll} mx-auto w-5/6 gap-16`}>
-          {/* LEFT SIDE */}
-          <img src={Logo} alt="" className="w-[125px]" />
+        <div className={`${flexBetween} mx-auto w-5/6`}>
+          <div className={`${flexBetween} w-full gap-16`}>
+            {/* LEFT SIDE */}
+            <img src={Logo} alt="" className="w-[125px]" />
 
-          {/* RIGHT SIDE */}
-          {isAboveMediumScreen ? (
-            <div className={`${flexBetween} w-full`}>
-              <div className={`${flexBetween} gap-8 text-sm`}>
-                <Link
-                  page="Home"
-                  selectedPage={selectedPage}
-                  setSelectedPage={setSelectedPage}
-                />
-                <Link
-                  page="Benefits"
-                  selectedPage={selectedPage}
-                  setSelectedPage={setSelectedPage}
-                />
-                <Link
-                  page="Our Classes"
-                  selectedPage={selectedPage}
-                  setSelectedPage={setSelectedPage}
-                />
-                <Link
-                  page="Contact Us"
-                  selectedPage={selectedPage}
-                  setSelectedPage={setSelectedPage}
-                />
+            {/* RIGHT SIDE */}
+            {isAboveMediumScreen ? (
+              <div className={`${flexBetween} w-full`}>
+                <div className={`${flexBetween} gap-8 text-sm`}>
+                  <Link
+                    page="Home"
+                    selectedPage={selectedPage}
+                    setSelectedPage={setSelectedPage}
+                  />
+                  <Link
+                    page="Benefits"
+                    selectedPage={selectedPage}
+                    setSelectedPage={setSelectedPage}
+                  />
+                  <Link
+                    page="Our Classes"
+                    selectedPage={selectedPage}
+                    setSelectedPage={setSelectedPage}
+                  />
+                  <Link
+                    page="Contact Us"
+                    selectedPage={selectedPage}
+                    setSelectedPage={setSelectedPage}
+                  />
+                </div>
+
+                <ActionButton setSelectedPage={setSelectedPage}>
+                  Become a Member
+                </ActionButton>
               </div>
-
-              <ActionButton setSelectedPage={setSelectedPage}>
-                Become a Member
-              </ActionButton>
-            </div>
-          ) : (
-            <button
-              className="rounded-full bg-secondary-500 p-2"
-              onClick={() => setIsMenuToggled(!isMenuToggled)}
-            >
-              <Bars3Icon className="h-6 w-6 text-white" />
-            </button>
-          )}
+            ) : (
+              <button
+                className="rounded-full bg-secondary-500 p-2"
+                onClick={() => setIsMenuToggled(!isMenuToggled)}
+              >
+                <Bars3Icon className="h-6 w-6 text-white" />
+              </button>
+            )}
+          </div>
         </div>
       </div>
 
