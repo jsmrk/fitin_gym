@@ -17,21 +17,21 @@ import useMediaQuery from "@/hooks/useMediaQuery";
 const benefits: Array<BenefitType> = [
   {
     icon: <HomeModernIcon className="h-6 w-6" />,
-    title: "State of the Art Facilities",
+    title: "Training with Top-Tier Equipment",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi tempora odit amet dolor eligendi commodi!",
+      "  Combine the expertise of certified trainers with access to state-of-the-art equipment!",
   },
   {
     icon: <UserGroupIcon className="h-6 w-6" />,
-    title: "100's of Diverse Classes",
+    title: "Diverse Group Fitness Classes",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, porro cum. Voluptatum odio quod tenetur dicta qui?",
+      "Fitin Gym offers a wide range of group fitness classes to suit all preferences!",
   },
   {
     icon: <AcademicCapIcon className="h-6 w-6" />,
-    title: "Expert and Pro Trainees",
+    title: "Top-Notch Trainers",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus quia, voluptatem architecto amet sequi ratione autem adipisci expedita animi ullam.",
+      "The expertise of our highly qualified trainers with cutting-edge facilities and equipment!",
   },
 ];
 
@@ -66,9 +66,10 @@ function Benefits({ setSelectedPage }: Props) {
         >
           <HText>MORE THAN JUST GYM</HText>
           <p className="my-5 text-sm">
-            We provide world class fitness equipment, trainers and classes to
-            get you to your ultimate fitness goals with ease. We provide true
-            care into each and every member
+            We believe in fostering physical and mental well-being through a
+            diverse range of group fitness classes, top-notch equipment, and a
+            supportive atmosphere. Our certified trainers create personalized
+            plans to help you achieve your goals.
           </p>
         </motion.div>
 
@@ -117,11 +118,12 @@ function Benefits({ setSelectedPage }: Props) {
                     hidden: { opacity: 0, x: 50 },
                     visible: { opacity: 1, x: 0 },
                   }}
-                  className="pt-11 md:pt-0"
+                  className="pt-11 md:pt-0 pb-5"
                 >
                   <HText>
-                    MILLIONS OF HAPPY MEMBERS GETTING{" "}
-                    <span className="text-primary-500">FIT</span>.
+                    Your Gateway to{" "}
+                    <span className="text-primary-500">Physical</span> and{" "}
+                    <span className="text-primary-500">Mental Wellness</span>.
                   </HText>
                 </motion.div>
               </div>
@@ -139,19 +141,18 @@ function Benefits({ setSelectedPage }: Props) {
               }}
             >
               <p className="my-5 ">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Dolores et accusantium possimus iste laborum error. Ratione
-                eligendi asperiores aliquid numquam, ea velit recusandae eos
-                modi labore eius. Quis nobis perspiciatis, nostrum repellat vero
-                obcaecati officiis? Perferendis aspernatur eos quae, tempore
-                commodi tenetur recusandae amet id et voluptatibus explicabo
-                quasi in!
+                Fitin Gym isn't just about physical transformation, it's about
+                building a stronger you, inside and out. We're proud to be a
+                community of over a million members who have achieved incredible
+                results, not just on the scale or with their strength training,
+                but also in their mental well-being. With personalized plans
+                from our top-notch trainers, diverse group fitness classes, and
+                a supportive atmosphere.
               </p>
               <p className="mb-5">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
-                laboriosam recusandae corrupti vitae odio molestias, provident
-                magni ipsum eaque sequi, obcaecati, a maxime ab debitis officia
-                possimus tempora autem aliquid.
+                Fitin Gym empowers you to reach your full potential, both
+                physically and mentally. Join our movement and experience the
+                Fitin Gym difference!
               </p>
             </motion.div>
 

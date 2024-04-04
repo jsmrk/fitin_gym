@@ -2,51 +2,44 @@
 import { ClassType, SelectedPage } from "@/shared/types";
 import { motion } from "framer-motion";
 
-import image1 from "@/assets/image1.png";
-import image2 from "@/assets/image2.png";
-import image3 from "@/assets/image3.png";
-import image4 from "@/assets/image4.png";
-import image5 from "@/assets/image5.png";
-import image6 from "@/assets/image6.png";
+import image1 from "@/assets/image1.jpg";
+import image2 from "@/assets/image2.jpg";
+import image3 from "@/assets/image3.jpg";
+import image4 from "@/assets/image4.jpg";
+import image5 from "@/assets/image5.jpg";
 import HText from "@/shared/HText";
 import Class from "./Class";
 
 const classes: Array<ClassType> = [
   {
-    name: "Weight Traning Classes",
+    name: "Sculpt & Strength",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis facere exercitationem dolores eum! Cumque harum facilis placeat illum, hic dolor.",
+      "A targeted workout using various equipment (weights, resistance bands) to build muscle, improve definition, and enhance overall strength.",
     image: image1,
   },
   {
-    name: "Yoga Classes",
+    name: "Power Up HIIT",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis facere exercitationem dolores eum! Cumque harum facilis placeat illum, hic dolor.",
+      "High-intensity interval training (HIIT) that alternates between intense bursts of activity and short recovery periods, burning serious calories and boosting your metabolism.",
     image: image2,
   },
   {
-    name: "AB Core Classes",
+    name: "Cardio Kickboxing",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis facere exercitationem dolores eum! Cumque harum facilis placeat illum, hic dolor.",
+      "A fun and energetic class that combines punching and kicking techniques with cardio drills, improving coordination and cardiovascular health.",
     image: image3,
   },
   {
-    name: "Adventure Classes",
+    name: "Zumba",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis facere exercitationem dolores eum! Cumque harum facilis placeat illum, hic dolor.",
+      "A high-energy dance fitness class with Latin rhythms, perfect for burning calories while having a blast.",
     image: image4,
   },
   {
-    name: "Fitness Classes",
+    name: "YOGA",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis facere exercitationem dolores eum! Cumque harum facilis placeat illum, hic dolor.",
+      "A dynamic yoga class that links postures (asanas) with breathwork (pranayama) to improve flexibility, strength, and mindfulness.",
     image: image5,
-  },
-  {
-    name: "Traning Classes",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis facere exercitationem dolores eum! Cumque harum facilis placeat illum, hic dolor.",
-    image: image6,
   },
 ];
 
@@ -54,7 +47,7 @@ type Props = { setSelectedPage: (value: SelectedPage) => void };
 
 const OurClasses = ({ setSelectedPage }: Props) => {
   return (
-    <section id="ourclasses" className="w-full bg-primary-100 py-40">
+    <section id="ourclasses" className="w-full bg-primary-100 py-20">
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.OurClasses)}
       >
@@ -72,13 +65,12 @@ const OurClasses = ({ setSelectedPage }: Props) => {
           <div className="md:w-3/5">
             <HText>Our Classes</HText>
             <p className="py-5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
-              eius dolorem saepe aut. Sunt rerum amet dolorum provident atque at
-              natus ratione corporis, quia optio nesciunt reiciendis explicabo
-              praesentium soluta, eveniet ad voluptas, deserunt incidunt
-              asperiores maiores odit dolore porro! Beatae exercitationem,
-              voluptatibus molestias amet inventore aspernatur fugiat iusto
-              nesciunt.
+              Explore high-energy cardio classes to ignite your spirit, targeted
+              strength training to build resilience, and mindful practices like
+              yoga and meditation to cultivate inner strength. With every class,
+              you'll be guided by our top-notch trainers, motivated by a
+              supportive community, and equipped with state-of-the-art
+              facilities.
             </p>
           </div>
         </motion.div>

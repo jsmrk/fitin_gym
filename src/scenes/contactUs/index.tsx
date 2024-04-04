@@ -33,8 +33,8 @@ const ContactUs = ({ setSelectedPage }: Props) => {
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}
       >
-        <div className="mt-10 justify-between gap-11 md:flex ">
-          <div>
+        <div className="md:flex mt-10 md:gap-11">
+          <div className="md:w-4/5">
             <motion.div
               className="md:w-4/5"
               initial="hidden"
@@ -134,7 +134,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
             </motion.div>
           </div>
           <motion.div
-            className="relative mt-16 md:mt-0 flex justify-center items-center px-11"
+            className="mt-16 md:mt-0 flex justify-center items-center px-11"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false, amount: 0.3 }}
@@ -147,7 +147,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
             <img
               src={ContactUsPageGraphic}
               alt="contact-graphic"
-              className="rounded-3xl w-full"
+              className="rounded-3xl max-w-[470px]"
             />
           </motion.div>
         </div>
